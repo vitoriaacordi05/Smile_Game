@@ -84,16 +84,17 @@ function verifica(obj) {
       acertos++;
       document.getElementById("mensagem").innerHTML = "ACERTOU! 🎉";
     } else {
-      obj.className = "errou";
+  
+    obj.className = "errou";
+
+      // smile triste na carta errada
+      obj.innerHTML = "😢";
 
       const objSorteado = document.getElementById(sorteado);
       acertou(objSorteado);
 
       document.getElementById("mensagem").innerHTML = "ERROU! 😢";
     }
-
-    atualizaPlacar(acertos, tentativas);
-
   } else {
     alert('Clique em "Jogar novamente"');
   }
